@@ -32,6 +32,12 @@ public class calculator {
     public static double power(double a, double b){
         return Math.pow(a,b);
     }
+    public static double sinc(double a){
+        return Math.sin(a);
+    }
+    public static void cosine(double a){
+        return Math.cos(a);
+    }
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
         char cont = 'y';
@@ -49,6 +55,7 @@ public class calculator {
                 System.out.println("enter 3 for multiplication");
                 System.out.println("enter 4 for division");
                 System.out.println("enter 5 for modulus");
+                
                 int opt = ip.nextInt();
                 switch (opt) {
                     case 1:
@@ -78,6 +85,7 @@ public class calculator {
                         double s = mod(a, b);
                         System.out.println(s);
                         break;}
+                    
         
                 
                     default:
@@ -93,6 +101,8 @@ public class calculator {
                 System.out.println("enter 3 for factorial");
                 System.out.println("enter 4 for square");
                 System.out.println("enter 5 for cube");
+                System.out.println("enter 6 for sin of the number");
+                System.out.println("enter 7 for cosine of the number");
                 int opt = ip.nextInt();
                 switch (opt) {
                     case 1:
@@ -121,8 +131,21 @@ public class calculator {
                         double n = cube(a);
                         System.out.println(n);
                         break;
+                    case 6:
+                        {
+                        double s = sinc(a);
+                        System.out.println(s);
+                        break;
+                        }
+                    case 7:
+                        {
+                            double s= cosine(a);
+                            System.out.println(s);
+                            break;
+                        }
                     default:
                         
+                        System.out.println("invalid input");
                         break;
                 
                 }
@@ -143,3 +166,4 @@ public class calculator {
     }
     
 }
+
